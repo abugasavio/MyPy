@@ -6,3 +6,4 @@ def outer_func(message):
 
 func = outer_func('Hi there')
 print(func())
+
