@@ -22,4 +22,4 @@ data = {
 data = collections.defaultdict(lambda: "MISSING", data)
 print(data["rating"])
 
-
+ 
