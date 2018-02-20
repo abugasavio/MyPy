@@ -24,4 +24,19 @@ class ShippingContainer:
     def __init__(self, owner_code, contents):
         self.owner_code = owner_code
         self.contents = contents
-        self.bic = ShippingContainer._make_bic_code(owner_code=owner_code, serial=ShippingContainer._get_next_serial())
+        self.bic = self._make_bic_code(owner_code=owner_code, serial=ShippingContainer._get_next_serial())
+
+
+class RefrigeratedShippingContainer(ShippingContainer):
+    
+    MAX_CELSIUS = 4.0
+
+    def __init__(self, owner_code, contents, celsius):
+        super().__init__(owner_code, contents, celsius)
+        if celsius > RefrigeratedShippingContainer.MAX_CELSIUS:
+            raise ValueError('Temperature too hot!')
+        self.celsuis = celsius
+
+    @staticmethod
+    def _make_bic_code(owner_code, serial):
+        return iso6346.create(owner_code=owner_code, serial=str(serial).zfill(6), category='R')
