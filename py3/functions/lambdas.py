@@ -1,4 +1,4 @@
-students = ["Savio", "John", "Michael", "andrew"]
+ students = ["Savio", "John", "Michael", "andrew"]
 
 sorted_students = sorted(students, key=lambda name: name.lower())
 
