@@ -1,0 +1,15 @@
+class Trace:
+    def __init__(self):
+        self.enabled = True
+
+    def __call__(self, f):
+        def wrap(*args, **kwargs):
+            if self.enabled:
+                print('Calling {}'.format(f))
+            return f(*args, **kwargs)
+        return wrap
+
+
+trace = Trace()
+
+result = map(Trace()(ord), 'This quick brown fox')
