@@ -28,3 +28,9 @@ class SortedSet:
         if not isinstance(rhs, SortedSet):
             return NotImplemented
         return self._items != rhs._items
+
+    def __reversed__(self):
+        # Method 1:
+        # return iter(self._items[::-1])
+        # Method 2:
+        return reversed(self._items)
