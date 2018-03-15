@@ -15,7 +15,7 @@ class Employee:
         return '{} {} - {}'.format(self.first, self.last, self.pay)
 
     def __repr__(self):
-        return ('{self.__class__.__name__}({self.color!r}, {self.mileage!r})'.format(self))
+        return (f'Employee({self.first!r, self.second!r, self.pay!r})')
 
 
 print(Employee.__dict__)
