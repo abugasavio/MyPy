@@ -1,3 +1,4 @@
+from bisect import bisect_left
 from collections.abc import Sequence
 
 
@@ -37,3 +38,9 @@ class SortedSet(Sequence):
         # return iter(self._items[::-1])
         # Method 2:
         return reversed(self._items)
+
+    def index(self, item):
+        index = bisect_left(self._items, item)
+        if index != len(self._items) and (self._items[index] == item):
+            return index
+        raise ValueError("{} not found".format(repr(item)))
