@@ -1,0 +1,6 @@
+{
+  "backup_day_limit": 21,
+  "temp_backup_dir": "/mtn/tmp",
+  "is_true": true,
+  "test": "testing"
+}
