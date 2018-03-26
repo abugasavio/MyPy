@@ -9,6 +9,7 @@ name = "pypi"
 ipython = "==6.2.1"
 pika = "*"
 bpython = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.5"
