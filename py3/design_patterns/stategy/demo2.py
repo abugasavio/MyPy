@@ -22,7 +22,7 @@ class FedExStrategy(AbsStrategy):
 class PostStrategy(AbsStrategy):
     def calculate(self, order):
         return 5.00
-
+ 
 class UPSStrategy(AbsStrategy):
     def calculate(self, order):
         return 4.00
