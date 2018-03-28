@@ -1,3 +1,6 @@
+from contextlib import contextmanager
+
+
 class Connection:
     def __init__(self):
         self.xid = 0
@@ -34,7 +37,7 @@ xact.commit()
 
 
 # using a context manager
-from contextlib import contextmanager
+
 
 @contextmanager
 def start_transaction(connection):
@@ -42,10 +45,10 @@ def start_transaction(connection):
 
     try:
         yield tx
-    except:
+    except: # noqa
         tx.rollback()
         raise
-        
+
     tx.commit()
 
 
