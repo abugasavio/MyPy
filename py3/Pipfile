@@ -6,11 +6,12 @@ name = "pypi"
 [dev-packages]
 
 [packages]
-ipython = "==6.2.1"
+ipython = "*"
 pika = "*"
 bpython = "*"
 pytest = "*"
 "flake8" = "*"
+ipdb = "*"
 
 [requires]
 python_version = "3.5"
