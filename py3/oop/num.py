@@ -1,7 +1,8 @@
-class MyClass:
-    classy = 10
+my_student = {
+    'name': 'Savio Abuga',
+    'grades': [70, 88, 90, 99]
+}
 
-    def set_val(self):
-        self.insty = 100
 
-
+def average_marks(student):
+    return sum(student['grades']) / len(student['grades'])

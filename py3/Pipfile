@@ -12,6 +12,8 @@ bpython = "*"
 pytest = "*"
 "flake8" = "*"
 ipdb = "*"
+Pillow = "*"
+pillow = "==5.0"
 
 [requires]
 python_version = "3.5"

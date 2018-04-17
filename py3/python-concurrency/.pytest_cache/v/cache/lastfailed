@@ -1,0 +1,9 @@
+{
+  "02/demos/python-concurrency-getting-started-master/test_thumbnail_maker.py": true,
+  "03/demos/python-concurrency-getting-started-4cee6c44abb00c9a16ccde4a69ebbea1a9cd2b4b/test_thumbnail_maker.py": true,
+  "04/demos/python-concurrency-getting-started-develop-master/test_thumbnail_maker.py": true,
+  "06/09/test_thumbnail_maker.py": true,
+  "06/code/test_thumbnail_maker.py": true,
+  "06/demos/python-concurrency-getting-started-develop-asyncio/test_thumbnail_maker.py": true,
+  "code/test_thumbnail_maker.py": true
+}
