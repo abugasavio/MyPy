@@ -24,7 +24,7 @@ def test_fstring():
     # ***********************************
     x = 0
 
-    answer = f'x: 0 sin(x): {math.sin(x):.2f}'
+    answer = f'x: {x} sin(x): {math.sin(x):.2f}'
 
     assert answer == 'x: 0 sin(x): 0.00'
 
