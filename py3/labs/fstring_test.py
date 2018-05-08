@@ -1,3 +1,5 @@
+import math
+
 
 def test_fstring():
     # Assuming the variables ``stock`` and ``price``
@@ -9,6 +11,7 @@ def test_fstring():
     stock = 'APPL'
     price = 171.98
 
+    res = f'Stock: {stock} Price: {price}'
 
     assert res == 'Stock: APPL Price: 171.98'
 
@@ -20,6 +23,8 @@ def test_fstring():
     # You should use an fstring to do this
     # ***********************************
     x = 0
+
+    answer = f'x: 0 sin(x): {math.sin(x):.2f}'
 
     assert answer == 'x: 0 sin(x): 0.00'
 
