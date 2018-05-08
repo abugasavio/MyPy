@@ -1,4 +1,4 @@
-
+from statistics import variance, mean, stdev
 
 def test_stat():
     # Calculate the mean, variance, and
@@ -9,6 +9,10 @@ def test_stat():
     # ***********************************
     data = [967, 1190, 1179, 1349, 2328, 2504, 2873, 4764,
             4349, 4353, 9916, 13889]
+
+    m = mean(data)
+    v = variance(data)
+    s = stdev(data)
 
     assert m == 4138.416666666667
     assert v == 15616030.265151514

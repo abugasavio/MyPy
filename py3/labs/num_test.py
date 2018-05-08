@@ -5,13 +5,16 @@ def test_nums():
     # in ``floors``.
     # ***********************************
 
+    floors = 102 // 7
+
     assert hex(floors) == '0xe'
 
     # What percentage of the floors have you climbed?
     # Store the result as a string ("53.2%") with 1
     # decimal of precision in variable ``per``
-    # ***********************************
+    # **********************************
 
+    per = f'{7/102:.1%}'
     assert per[::-1] == '%9.6'
 
 
@@ -21,6 +24,7 @@ def test_nums():
     # result in ``coins``.
     # ***********************************
     satoshis = (2**64) - 1
+    coins = satoshis // 3
     
     assert coins * 3 == satoshis
 
@@ -30,6 +34,9 @@ def test_nums():
     # (Use _ to make population easier to read)
     # ***********************************
     
+    us_coins = satoshis // 326_979_681
+
+
     assert us_coins == 56_415_566_916
     
 
