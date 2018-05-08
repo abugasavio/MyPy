@@ -23,6 +23,7 @@ def test_mario():
     # ***********************************
 
 
+
     from py3code import Character, Luigi, Mario
     m = Mario()
     sp = m.speed()
