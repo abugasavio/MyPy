@@ -1,17 +1,23 @@
 import pytest
-
+from enum import Enum
 
 RED = 1
 BLUE = 2
 GREEN = 3
 
 
+class Color(Enum):
+    red = 1
+    green = 2
+    blue = 3
+
+
 def get_rgb(color):
-    if color == RED:
+    if color == Color.red:
         return 255, 0, 0
-    elif color == GREEN:
+    elif color == Color.green:
         return 0, 255, 0
-    elif color == BLUE:
+    elif color == Color.blue:
         return 0, 0, 255
 
 
@@ -39,6 +45,11 @@ def test_enum():
     # ``Enum`` class to create it
     # ***************************************
  
+    class Pet(Enum):
+        dog = 'dog'
+        cat = 'cat'
+        fish = 'fish'
+        
     assert {x.name for x in Pet} == \
         {'cat', 'dog', 'fish'} 
 

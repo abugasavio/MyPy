@@ -1,0 +1,47 @@
+[
+    {
+        "path": "py3pa.py",
+        "line": 4,
+        "func_name": "Character.__init__",
+        "type_comments": [
+            "(int, int, int) -> None"
+        ],
+        "samples": 1
+    },
+    {
+        "path": "py3pa.py",
+        "line": 12,
+        "func_name": "Character.speed",
+        "type_comments": [
+            "() -> int"
+        ],
+        "samples": 1
+    },
+    {
+        "path": "py3pa.py",
+        "line": 20,
+        "func_name": "Mario.speed",
+        "type_comments": [
+            "() -> int"
+        ],
+        "samples": 1
+    },
+    {
+        "path": "py3pa.py",
+        "line": 33,
+        "func_name": "force",
+        "type_comments": [
+            "(int, float) -> float"
+        ],
+        "samples": 1
+    },
+    {
+        "path": "runpa.py",
+        "line": 6,
+        "func_name": "test_pa",
+        "type_comments": [
+            "() -> None"
+        ],
+        "samples": 1
+    }
+]

@@ -1,5 +1,6 @@
 from pathlib import Path
 
+
 def test_ann3rd():
     """
     0. Copy py3code.pyORIG to py3mt.py and py3pa.py

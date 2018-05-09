@@ -1,22 +1,27 @@
+from pathlib import Path
+
 def test():
     # Get the contents of the current directory
     # using the ``path`` module.
     # Store the results in ``cur``.
     # ***********************************
 
+    cur = list(Path('.').iterdir())
+
     assert 'path_test.py' in list(map(str,cur))
 
     # Make a path with a file named ``test.txt``
     # Store it in ``test_file``.
     # ***********************************
-
+    test_file = Path('.') / 'test.txt'
 
     assert test_file.suffix == '.txt'
 
     # Write 'hello world' to
     # the test_file.
     # ***********************************
-
+    with open(test_file, 'w') as fout:
+        fout.write('hello world')
 
     assert test_file.exists()
     assert test_file.name == 'test.txt'
@@ -25,6 +30,8 @@ def test():
 
     # Delete test_file
     # ***********************************
+
+    Path.unlink(test_file)
 
     assert not test_file.exists()
 
