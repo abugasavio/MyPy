@@ -12,7 +12,7 @@ class Character:
 
     def speed(self):
         return self._speed
-
+# 
     def power(self):
         return self._power
 

@@ -17,6 +17,7 @@ pillow = "==5.0"
 mypy = "*"
 monkeytype = "*"
 pyannotate = "*"
+pytest-asyncio = "*"
 
 [requires]
 python_version = "3.5"
