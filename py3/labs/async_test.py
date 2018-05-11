@@ -17,8 +17,9 @@ async def test_async():
     # Finally it returns the sum.
     # ************************************
     async def add2(num1, num2):
+        res = num1 + num2
         await asyncio.sleep(0)
-        return num1 + num2
+        return res
 
     res = await add2(2, 3)
     assert res == 5
@@ -40,7 +41,8 @@ async def test_async():
         for coroutine in coroutines:
             value = await coroutine
             res.append(value)
-        return (sum(res) + size) / (len(res) + 1)
+            if len(res) == size:
+                return sum(res) / len(res)
 
     res3 = await avg([add2(1, 3),
                      add2(1, 4),
