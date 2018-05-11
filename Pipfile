@@ -9,3 +9,4 @@ mypy = "*"
 [packages]
 "flake8" = "*"
 nltk = "==3.2.5"
+"beautifulsoup4" = "*"
