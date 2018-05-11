@@ -18,6 +18,8 @@ mypy = "*"
 monkeytype = "*"
 pyannotate = "*"
 pytest-asyncio = "*"
+aiohttp = "*"
+aiofiles = "*"
 
 [requires]
 python_version = "3.5"
