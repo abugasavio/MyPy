@@ -4,6 +4,9 @@ from phonebook.phonebook import Phonebook
 
 @pytest.fixture
 def phonebook():
+    """
+    create phonebook
+    """
     phonebook = Phonebook()
     yield phonebook
     phonebook.clear()

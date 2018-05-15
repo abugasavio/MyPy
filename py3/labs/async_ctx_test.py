@@ -1,5 +1,5 @@
 import time
-
+import asyncio
 import pytest
 
 
@@ -10,6 +10,15 @@ async def test_async():
     # When the context is entered it should
     # pause for that many seconds ( call ``asyncio.sleep``).
     # ************************************
+    class staller:
+        def __init__(self, time):
+            self.time = time
+
+        async def __aenter__(self):
+            await asyncio.sleep(self.time)
+
+        async def __aexit__(self, exc, val, tb):
+            pass
 
     now = time.time()
     async with staller(1):
@@ -21,6 +30,16 @@ async def test_async():
     # and call the ``.close`` method on it
     # when the context exits.
     # ************************************
+
+    class closer:
+        def __init__(self, obj):
+            self.obj = obj
+
+        async def __aenter__(self):
+            pass
+
+        async def __aexit__(self, exc, val, tb):
+            self.obj.close()
 
     class CloseMe:
         def close(self):
